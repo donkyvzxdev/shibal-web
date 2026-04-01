@@ -269,10 +269,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const initializeMedia = () => {
         const mediaElements = document.querySelectorAll('video, audio');
         mediaElements.forEach(media => {
-            media.volume = 0.4;
+            // Set volume to 30% for safety (preventing ear fatigue)
+            media.volume = 0.3;
             // Re-apply on load to ensure the setting sticks
             media.addEventListener('loadedmetadata', () => {
-                media.volume = 0.4;
+                media.volume = 0.3;
             });
         });
     };
