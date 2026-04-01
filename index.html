@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shibal - Elevate Your Gameplay</title>
+    <meta name="description"
+        content="Download Shibal, the ultimate gaming enhancement suite with unparalleled precision, customization, and safety.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->
+    <div class="bg-layer" id="bg-layer"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <img src="assets/shibal_icon.png" alt="Shibal logo" class="brand-icon-img">
+                <span>Shibal</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="#get-started">How to get started?</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://discord.gg/WDz36AdYVJ" target="_blank" class="btn btn-outline discord-btn">
+                    <i class="ri-discord-fill"></i> Discord
+                </a>
+                <a href="#get-started" class="btn btn-primary">Get started!</a>
+            </div>
+
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+            <div class="mobile-nav-header">
+                <div class="brand">
+                    <img src="assets/shibal_icon.png" alt="Shibal logo" class="brand-icon-img">
+                    <span>Shibal</span>
+                </div>
+                <div class="close-mobile-menu" id="close-mobile-menu">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="#get-started">How to get started?</a></li>
+                <li class="mobile-nav-actions">
+                    <a href="https://discord.gg/WDz36AdYVJ" target="_blank" class="btn btn-outline discord-btn">
+                        <i class="ri-discord-fill"></i> Discord
+                    </a>
+                    <a href="#get-started" class="btn btn-primary">Get started!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="pulse-dot"></span>
+                    <span class="badge-text">v6.4.2 Released - Safe & Undetected</span>
+                </div>
+                <h1 class="hero-title">
+                    Master Your <br />
+                    <span class="gradient-text">World Unseen.</span>
+                </h1>
+                <p class="hero-description">
+                    Shibal provides an intuitive, highly-customizable suite of enhancements designed to streamline your
+                    gameplay without compromising security.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#get-started" class="btn btn-large btn-primary hover-glow">
+                        <i class="ri-rocket-line"></i> How to get started?
+                    </a>
+                    <a href="guides.html" class="btn btn-large btn-secondary glass">
+                        <i class="ri-book-open-line"></i> View Documentation
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong class="counter" data-target="2000">0</strong><span>+</span>
+                        <p>Members</p>
+                    </div>
+                    <div class="stat-item">
+                        <strong>99.9%</strong>
+                        <p>Uptime</p>
+                    </div>
+                    <div class="stat-item">
+                        <strong>24/7</strong>
+                        <p>Live Support</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="shibalys-ui">
+                    <!-- UI Sidebar -->
+                    <aside class="shibalys-sidebar">
+                        <div class="sidebar-header">
+                            <span class="logo-text">SHIBALYS</span>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <div class="nav-section">
+                                <label>Overview</label>
+                                <a href="#" class="sidebar-item" data-tab="about"><i class="ri-information-line"></i>
+                                    About</a>
+                            </div>
+                            <div class="nav-section">
+                                <label>Local Exploit</label>
+                                <a href="#" class="sidebar-item active" data-tab="player"><i class="ri-user-line"></i>
+                                    Player</a>
+                            </div>
+                            <div class="nav-section">
+                                <label>Stat Tuning</label>
+                                <a href="#" class="sidebar-item" data-tab="stats"><i class="ri-vip-crown-line"></i>
+                                    Stats Modifier</a>
+                            </div>
+                            <div class="nav-section">
+                                <label>World Control</label>
+                                <a href="#" class="sidebar-item" data-tab="world"><i class="ri-earth-line"></i>
+                                    World</a>
+                            </div>
+                            <div class="nav-section">
+                                <label>Teleport Tools</label>
+                                <a href="#" class="sidebar-item" data-tab="teleports"><i class="ri-map-pin-line"></i>
+                                    Teleports</a>
+                            </div>
+                            <div class="nav-section">
+                                <label>Visual Enhancements</label>
+                                <a href="#" class="sidebar-item" data-tab="visuals"><i class="ri-eye-line"></i>
+                                    Visuals</a>
+                            </div>
+                        </nav>
+                    </aside>
+
+                    <!-- UI Content Area -->
+                    <main class="shibalys-content">
+                        <header class="content-header">
+                            <div class="header-left">
+                                <i class="ri-settings-3-line"></i>
+                            </div>
+                            <div class="header-right">
+                                <div class="user-info">
+                                    <span class="user-name">Ikeh Kimochi</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                                <i class="ri-search-line"></i>
+                            </div>
+                        </header>
+
+                        <div class="content-body" id="ui-tab-player">
+                            <div class="ui-grid">
+                                <!-- Left Column -->
+                                <div class="ui-column">
+                                    <div class="ui-card">
+                                        <label class="card-label">Infinite Stamina</label>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch active"></div>
+                                            <span>Enable</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-card">
+                                        <label class="card-label">No Cooldown</label>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch"></div>
+                                            <span>Enable</span>
+                                        </div>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-radio"></div>
+                                            <span>Vehicle Cooldown</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-card">
+                                        <label class="card-label">Noclip</label>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch active"></div>
+                                            <span>Enable</span>
+                                            <span class="kb-badge">XBUTTON2</span>
+                                            <span class="status-tag">HOLD</span>
+                                        </div>
+                                        <div class="slider-group">
+                                            <div class="slider-header">
+                                                <span>Speed</span>
+                                                <span class="slider-value">50.00</span>
+                                            </div>
+                                            <input type="range" class="shibal-range" value="50">
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-card">
+                                        <label class="card-label">Attack Tuning</label>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch active"></div>
+                                            <span>Enable Attack Multiplier</span>
+                                        </div>
+                                        <div class="slider-group">
+                                            <div class="slider-header">
+                                                <span>Multiplier Value</span>
+                                                <span class="slider-value">18.000</span>
+                                            </div>
+                                            <input type="range" class="shibal-range" value="18" max="100">
+                                        </div>
+                                        <div class="ui-row control-group mt-s">
+                                            <div class="shibal-switch active"></div>
+                                            <span>Always Critical Hit</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="ui-column">
+                                    <div class="ui-card">
+                                        <label class="card-label">Extra Movement</label>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch active"></div>
+                                            <span>Enable</span>
+                                        </div>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch"></div>
+                                            <span>Run On Water</span>
+                                        </div>
+                                        <div class="ui-tabs-mini">
+                                            <span class="active">Ground</span>
+                                            <span>Air</span>
+                                            <span>Water</span>
+                                            <span>Skills</span>
+                                        </div>
+                                        <div class="slider-group">
+                                            <div class="slider-header">
+                                                <span>Run Boost</span>
+                                                <span class="slider-value">1.5x</span>
+                                            </div>
+                                            <input type="range" class="shibal-range" value="15" max="50">
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-card">
+                                        <label class="card-label">Bunny Hop</label>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch active"></div>
+                                            <span>Enable</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-card">
+                                        <label class="card-label">Global Speed</label>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch"></div>
+                                            <span>Enable</span>
+                                            <span class="kb-badge">XBUTTON2</span>
+                                            <span class="status-tag status-toggle">TOGGLE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-card">
+                                        <label class="card-label">Player Speed</label>
+                                        <div class="ui-row control-group">
+                                            <div class="shibal-switch"></div>
+                                            <span>Enable Player Speed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui-footer-status">
+                            <div class="status-left">
+                                <i class="ri-shield-check-fill"></i> System Secure. Bypass v6.4.2 Active.
+                            </div>
+                            <div class="status-right">
+                                <i class="ri-signal-tower-line"></i> 98 ms
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose <span class="gradient-text">Shibal</span>?</h2>
+            <p class="section-subtitle">Engineered for performance, designed for true gamers. Our toolkit runs
+                seamlessly in the background.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card glass-card">
+                <div class="feature-icon">
+                    <i class="ri-user-settings-line"></i>
+                </div>
+                <h3>Combat & Player</h3>
+                <p>Dominate your game with precision movement and high-damage capabilities.</p>
+                <ul class="feature-list-mini">
+                    <li>God Mode & No Clip</li>
+                    <li>Multi-Hit (Custom Damage)</li>
+                    <li>Infinite Stamina & Energy</li>
+                </ul>
+            </div>
+
+            <div class="feature-card glass-card">
+                <div class="feature-icon">
+                    <i class="ri-earth-line"></i>
+                </div>
+                <h3>World Automation</h3>
+                <p>Automate everything from exploration to resource gathering.</p>
+                <ul class="feature-list-mini">
+                    <li>Intelligent Auto Loot</li>
+                    <li>Kill Aura with Field Range</li>
+                    <li>Puzzle Solver & Fast Dialogues</li>
+                </ul>
+            </div>
+
+            <div class="feature-card glass-card">
+                <div class="feature-icon">
+                    <i class="ri-eye-line"></i>
+                </div>
+                <h3>Visual Intelligence</h3>
+                <p>Stay ten steps ahead with complete battlefield visibility.</p>
+                <ul class="feature-list-mini">
+                    <li>Highly Precise ESP (Enemies/Ores)</li>
+                    <li>Costume & Glider Changer</li>
+                    <li>FOV & FPS Unlocking</li>
+                </ul>
+            </div>
+
+            <div class="feature-card glass-card">
+                <div class="feature-icon">
+                    <i class="ri-magic-line"></i>
+                </div>
+                <h3>Quality of Life</h3>
+                <p>Customization options to optimize your daily gameplay experience.</p>
+                <ul class="feature-list-mini">
+                    <li>Remote Cooking & Crafting</li>
+                    <li>Unlocks All Map Waypoints</li>
+                    <li>One-Click Chest Teleport</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Join Section -->
+    <section class="cta-section" id="join">
+        <div class="cta-container glass">
+            <h2>Ready to Elevate Your Experience?</h2>
+            <p>Join the rapidly growing community of Shibal users today. Gain the ultimate edge.</p>
+            <div class="cta-buttons">
+                <a href="https://discord.gg/WDz36AdYVJ" target="_blank" class="btn btn-primary btn-large">
+                    <i class="ri-vip-crown-fill"></i> Join the discord
+                </a>
+                <a href="#get-started" class="btn btn-outline btn-large">
+                    How to get started?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="get-started" id="get-started">
+        <div class="section-header">
+            <h2 class="section-title">How to <span class="gradient-text">Get Started</span>?</h2>
+            <p class="section-subtitle">Shibal operates strictly via private invitation and sponsorship. Follow these
+                steps to join our exclusive community.</p>
+        </div>
+        <div class="steps-container">
+            <div class="step-card glass-card">
+                <div class="step-number">01</div>
+                <h3>Join the Discord</h3>
+                <p>Our community is the heart of Shibal. You must join our Discord server, verify your identity, and
+                    read the community guidelines.</p>
+            </div>
+
+            <div class="step-card glass-card">
+                <div class="step-number">02</div>
+                <h3>Pay or Get a License</h3>
+                <p>You can purchase an invite code to gain instant access to the software, or get invited by an existing
+                    member to use it normally for free.</p>
+            </div>
+
+            <div class="step-card glass-card">
+                <div class="step-number">03</div>
+                <h3>Download & Inject</h3>
+                <p>Once your Discord role is updated, you'll gain access to the private download channels. Run the
+                    injector to begin.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="guides.html" class="btn btn-primary btn-large">
+                <i class="ri-book-open-line"></i> Guide for starting
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">
+                    <img src="assets/shibal_icon.png" alt="Shibal logo" class="brand-icon-img">
+                    <span>Shibal</span>
+                </div>
+                <p>The ultimate game enhancement utility designed by enthusiasts, for enthusiasts.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#changelog">Changelog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="guides.html">Documentation</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shibal Project. All rights reserved.</p>
+            <p class="disclaimer">Shibal is not affiliated with, endorsed, or sponsored by any game developers. Use at
+                your own risk.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
