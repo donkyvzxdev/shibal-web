@@ -206,11 +206,19 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
 
             if (activePane) {
-                // Trigger Slide Out Left
-                activePane.classList.add('slide-out-left');
-                activePane.classList.remove('droplet-expand');
+                // Ensure any previous timeouts or lingering states are cleared
+                // By removing 'active' immediately from all other panes, we prevent stacking
+                tabPanes.forEach(p => {
+                    if (p !== targetPane) {
+                        p.classList.remove('active', 'droplet-expand', 'slide-out-left');
+                    }
+                });
 
-                // Keep visually hidden but ready for next toggle
+                // Trigger Slide Out Left for the previously active one
+                // We add it back to the specific activePane for the animation
+                activePane.classList.add('active', 'slide-out-left');
+                
+                // Cleanup after animation
                 setTimeout(() => {
                     activePane.classList.remove('active', 'slide-out-left');
                 }, 600);
@@ -233,8 +241,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 void targetPane.offsetWidth; // Force Reflow
                 targetPane.classList.add('droplet-expand');
 
-                // Save state memory
-                localStorage.setItem('shibal_active_tab', targetId);
+                targetPane.classList.add('active');
+                targetPane.classList.remove('slide-out-left');
+                void targetPane.offsetWidth; // Force Reflow
+                targetPane.classList.add('droplet-expand');
             }
         });
     });
@@ -268,24 +278,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     initializeMedia();
 
-    // Check for saved tab on load
+    // Tab memory removed to always default to "Joining the Server"
+    /*
     const savedTab = localStorage.getItem('shibal_active_tab');
     if (savedTab) {
-        const targetLink = document.querySelector(`.dock-item[data-target="${savedTab}"]`);
-        if (targetLink) {
-            const targetPane = document.getElementById(savedTab);
-            const activePane = document.querySelector('.tab-pane.active');
-
-            if (targetPane && targetPane !== activePane) {
-                // Instantly switch tabs without animation on first load
-                document.querySelectorAll('.dock-item').forEach(l => l.classList.remove('active'));
-                targetLink.classList.add('active');
-
-                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active', 'droplet-expand'));
-                targetPane.classList.add('active');
-            }
-        }
+        ...
     }
+    */
 
     // === Feature Info Modal Logic ===
     const featuresData = {
